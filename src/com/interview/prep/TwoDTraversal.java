@@ -50,18 +50,22 @@ public class TwoDTraversal {
 			//moving up
 			if(node.row-1 >=0 && visited[node.row-1][node.column] == false) {
 				qNodes.add(new QNode(node.row-1, node.column, node.distance+1));
+				visited[node.row-1][node.column] = true;
 			}
 			//moving down
 			if(node.row+1 < rowLength && visited[node.row+1][node.column] == false) {
 				qNodes.add(new QNode(node.row+1, node.column, node.distance+1));
+				visited[node.row+1][node.column] = true;
 			}
 			//moving left
 			if(node.column-1 >=0 && visited[node.row][node.column-1] == false) {
 				qNodes.add(new QNode(node.row, node.column-1, node.distance+1));
+				visited[node.row][node.column-1] = true;
 			}
 			//moving right
 			if(node.column+1 < columnLength && visited[node.row][node.column+1] == false) {
 				qNodes.add(new QNode(node.row, node.column+1, node.distance+1));
+				visited[node.row][node.column+1] = true;
 			}
 		}
 		return -1;
