@@ -26,6 +26,6 @@ public class SecondLargestElementInBST {
 	public static Integer getSecondLargest(Node root, Integer height) {
 		if(root == null) return 0;
 		if(height == 2) return root.x;
-		
+		return 0;
 	}
 }
