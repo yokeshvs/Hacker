@@ -19,6 +19,12 @@ public class TwoDTraversal {
 	public static void main(String[] args) {
 		char[][] arr = { { '0', '*', '0', 's' }, { '*', '0', '*', '*' }, { '0', '*', '*', '*' },
 				{ 'd', '*', '*', '*' } };
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[0].length; j++) {
+				System.out.print(" " + arr[i][j]);
+			}
+			System.out.println();
+		}
 		System.out.println("Shortest Distance: " + findShortestPath(arr));
 	}
 	public static int findShortestPath(char[][] arr) {
